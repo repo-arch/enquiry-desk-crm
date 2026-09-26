@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-paper text-ink font-sans antialiased;
+}
+
+::selection {
+  @apply bg-teal-100;
+}
+
+.input {
+  @apply w-full rounded-sm border border-line bg-surface px-3 py-2 text-sm outline-none transition-colors;
+}
+.input:focus {
+  @apply border-teal-500 ring-1 ring-teal-500;
+}
+
+.label {
+  @apply mb-1 block text-[13px] font-medium text-ink/70;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-1.5 rounded-sm px-3.5 py-2 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-40;
+}
+.btn-primary {
+  @apply bg-teal-600 text-white hover:bg-teal-700;
+}
+.btn-secondary {
+  @apply border border-line bg-surface text-ink hover:bg-teal-50;
+}
+.btn-danger {
+  @apply border border-rose-500/30 bg-rose-100 text-rose-500 hover:bg-rose-100/80;
+}
+
+.card {
+  @apply rounded-sm border border-line bg-surface;
+}
+
+.badge {
+  @apply inline-flex items-center rounded-sm px-2 py-0.5 text-xs font-medium;
+}
